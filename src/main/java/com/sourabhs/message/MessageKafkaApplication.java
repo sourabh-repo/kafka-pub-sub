@@ -1,4 +1,4 @@
-package com.ss.message;
+package com.sourabhs.message;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

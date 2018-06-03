@@ -1,4 +1,4 @@
-package com.ss.message.service;
+package com.sourabhs.message.service;
 
 /**
  * @author sourabh

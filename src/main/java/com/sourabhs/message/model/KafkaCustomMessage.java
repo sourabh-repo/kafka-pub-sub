@@ -1,4 +1,4 @@
-package com.ss.message.model;
+package com.sourabhs.message.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

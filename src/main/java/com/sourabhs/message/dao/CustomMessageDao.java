@@ -1,10 +1,10 @@
-package com.ss.message.dao;
+package com.sourabhs.message.dao;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.ss.message.model.KafkaCustomMessage;
+import com.sourabhs.message.model.KafkaCustomMessage;
 
 public interface CustomMessageDao  extends CrudRepository<KafkaCustomMessage, Integer>{
 	//List<KafkaCustomMessage> getAllMessages();

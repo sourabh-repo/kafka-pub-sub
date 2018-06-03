@@ -1,4 +1,4 @@
-package com.ss.message.web;
+package com.sourabhs.message.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ss.message.service.KafkaSenderService;
+import com.sourabhs.message.service.KafkaSenderService;
 
 @RestController
 @RequestMapping(value = "/kafka")

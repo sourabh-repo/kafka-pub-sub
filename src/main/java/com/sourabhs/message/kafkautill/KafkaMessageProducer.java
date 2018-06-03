@@ -1,4 +1,4 @@
-package com.ss.message.kafkautill;
+package com.sourabhs.message.kafkautill;
 
 import java.util.concurrent.ExecutionException;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
-import com.ss.message.model.KafkaCustomMessage;
+import com.sourabhs.message.model.KafkaCustomMessage;
 
 /**
  * 

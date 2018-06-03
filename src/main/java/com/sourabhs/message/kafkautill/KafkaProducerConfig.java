@@ -1,4 +1,4 @@
-package com.ss.message.kafkautill;
+package com.sourabhs.message.kafkautill;
 
 
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -12,7 +12,7 @@ import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-import com.ss.message.model.KafkaCustomMessage;
+import com.sourabhs.message.model.KafkaCustomMessage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -62,8 +62,8 @@ public class KafkaProducerConfig {
     public ProducerFactory<String, KafkaCustomMessage> messageProducerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
-        configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class); // Type of Ket Serializer
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class); // Type of Value Serializer
         //configProps.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, CustomPartinoner.class); For Custom Partition 
         //configProps.put(ProducerConfig.ACKS_CONFIG, 0); //Maximun throughput as we don't have to wait for Ack message
         //configProps.put(ProducerConfig.ACKS_CONFIG, 1); //Chance of lossing message less but not may lose message also

@@ -1,4 +1,4 @@
-package com.ss.message.web;
+package com.sourabhs.message.web;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ss.message.model.KafkaCustomMessage;
-import com.ss.message.service.MessageReaderService;
+import com.sourabhs.message.model.KafkaCustomMessage;
+import com.sourabhs.message.service.MessageReaderService;
 @RestController
 @RequestMapping(value = "/kafka")
 public class MessageController {

@@ -1,4 +1,4 @@
-package com.ss.message.kafkautill;
+package com.sourabhs.message.kafkautill;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -8,8 +8,8 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
-import com.ss.message.model.KafkaCustomMessage;
-import com.ss.message.service.MessageReaderService;
+import com.sourabhs.message.model.KafkaCustomMessage;
+import com.sourabhs.message.service.MessageReaderService;
 
 @Component
 public class KafkaMessageListener {

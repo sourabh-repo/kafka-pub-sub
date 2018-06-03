@@ -1,11 +1,11 @@
-package com.ss.message.service;
+package com.sourabhs.message.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.ss.message.kafkautill.KafkaMessageProducer;
-import com.ss.message.model.KafkaCustomMessage;
+import com.sourabhs.message.kafkautill.KafkaMessageProducer;
+import com.sourabhs.message.model.KafkaCustomMessage;
 
 /**
  * 
@@ -57,9 +57,10 @@ import com.ss.message.model.KafkaCustomMessage;
  *       Topic: kafkabasic1      Partition: 1    Leader: 0       Replicas: 0,1,2 Isr: 0,1,2
  *
  *   Topic : Name of Topic 
- *   Partition : Index of Partition
+ *   Partition : Index of Partition, It increases the scalability of application for more consumers to receive the message, 
+ *   			Each message based on the key hash code goes to only one partition 
  *   Leader : Broker which is leader
- *   Replicas : 2, 0, 1 means 2 is leader 0 and 1 are copies and are followers
+ *   Replicas : 2, 0, 1 means 2 is leader 0 and 1 are copies and are followers, Replica is for fail over mechanism or  fault-tolerance
  *   Isr : Insync replicas i.e. 2,0,1 all three are in sync 
  * 
  *  ****************To Start Multiple Broker in one machine************************
@@ -84,7 +85,7 @@ import com.ss.message.model.KafkaCustomMessage;
 public class KafkaSenderServiceImpl implements KafkaSenderService  {
 
 	@Autowired
-	private KafkaTemplate<String, String> kafkaTemplate;
+	private KafkaTemplate<String, String> kafkaTemplate; // Used to send the message using topic
 	
 	@Autowired
 	private KafkaMessageProducer producer;
